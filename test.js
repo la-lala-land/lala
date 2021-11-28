@@ -1,0 +1,9 @@
+const mod = require('./index')
+
+let time = new mod.Time()
+console.log(time)
+console.log(time.array)
+console.log(time.stringify())
+console.log(time.stringify(null, true))
+console.log(time.stringify(["m", "ms"], false))
+console.log(time.stringify(["m", "ms"], true))
