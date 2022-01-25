@@ -1,0 +1,1 @@
+module.exports = (arr) => Array.isArray(arr) ? arr[Math.floor(Math.random() * arr.length)] : arr

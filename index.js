@@ -9,6 +9,12 @@ const Trash = {
     Decider: require('./classes/Decider')
 }
 
+const random = {
+    array: require('./functions/getRandom'),
+    string: require('./functions/getString'),
+    name: require('./functions/namer')
+}
+
 // You feel like the project is too big to import into your project? 
 // Let's do the magic called "copy/paste".
 // Copy whatever code you want and paste it in yer project
@@ -16,5 +22,6 @@ const Trash = {
 module.exports = {
     Time,
     Gacha,
-    Trash
+    Trash,
+    random,
 }
