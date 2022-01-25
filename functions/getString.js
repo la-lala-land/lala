@@ -42,11 +42,9 @@ module.exports = (lenn) => {
   //  maxlim = Math.ceil(Math.random() * limit);
   for (let mmm = 0; mmm < lenn - 1; ++mmm) {
     const chances = Math.random();
-    if (chances < 0.3)
-      phrase += alphabet[Math.floor(Math.random() * alphabet.length)];
+    if (chances < 0.3) phrase += getRandom(alphabet);
     else if (chances > 0.3 && chances < 0.7)
-      phrase +=
-        alphabet[Math.floor(Math.random() * alphabet.length)].toLowerCase();
+      phrase += getRandom(alphabet).toLowerCase();
     else phrase += Math.floor(Math.random() * 10);
   }
 
