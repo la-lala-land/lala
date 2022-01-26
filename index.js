@@ -12,7 +12,9 @@ const Trash = {
 const random = {
     array: require('./functions/getRandom'),
     string: require('./functions/getString'),
-    name: require('./functions/namer')
+    name: require('./functions/namer'),
+    email: require('./functions/email'),
+    monster: require('./functions/monster'),
 }
 
 // You feel like the project is too big to import into your project? 

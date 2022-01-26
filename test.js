@@ -12,4 +12,7 @@ console.log(time.stringify(["m", "ms"], true))
 
 // console.log(mod.random.string(Math.floor(Math.random() * 12)))
 console.log(mod.random.string(7))
-console.log(mod.random.name(5) + " " + mod.random.name(8))
+console.log((mod.random.name(5 + Math.floor(Math.random() * 5)) + " " + mod.random.name(5 + Math.floor(Math.random() * 5))))
+console.log(mod.random.email(true))
+console.log(mod.random.email(false))
+console.log(mod.random.monster())

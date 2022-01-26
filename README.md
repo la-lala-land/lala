@@ -12,6 +12,8 @@ The only class currently is `Time` tho. And it's not really a Time class but rat
 * Added a random string generator. Generates a random string. Accepts a `length` parameter. 
 * Added a random name generator which works the same as the string generator. Names do be weird tho.
 
+### Edit 25-01-2022
+
 ### How to use?
 Clone this repo inside your project directory and access it through index.js
 
@@ -19,4 +21,10 @@ Clone this repo inside your project directory and access it through index.js
 We use this magic called `copy/paste`. Copy whatever code you need and paste it directly into your project.
 
 ### Credits
-Me.
+Me. If you wanna credit me, leave a comment in the part of my code you used. Something like,
+
+```js
+/* 
+  From retraigo/lala
+*/
+```
