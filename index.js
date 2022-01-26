@@ -15,6 +15,7 @@ const random = {
     name: require('./functions/namer'),
     email: require('./functions/email'),
     monster: require('./functions/monster'),
+    chain: require('./functions/chainMail')
 }
 
 // You feel like the project is too big to import into your project? 

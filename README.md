@@ -12,7 +12,10 @@ The only class currently is `Time` tho. And it's not really a Time class but rat
 * Added a random string generator. Generates a random string. Accepts a `length` parameter. 
 * Added a random name generator which works the same as the string generator. Names do be weird tho.
 
-### Edit 25-01-2022
+### Edit 26-01-2022
+* Added a random email generator. Accepts a `common` parameter which can be `true` or `false`. Setting to `true` uses a common email provider name instead of randomly generating one.
+* Added a monster name generator. Basically the name generator but with a suffix.
+* Added a chain mail generator. Kinda funni.
 
 ### How to use?
 Clone this repo inside your project directory and access it through index.js

@@ -16,3 +16,4 @@ console.log((mod.random.name(5 + Math.floor(Math.random() * 5)) + " " + mod.rand
 console.log(mod.random.email(true))
 console.log(mod.random.email(false))
 console.log(mod.random.monster())
+console.log(mod.random.chain())
