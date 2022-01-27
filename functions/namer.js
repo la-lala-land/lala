@@ -34,6 +34,7 @@ const doubleConsonants = ["S", "T", "H", "C"];
 const afterZ = ["H", "T"];
 
 module.exports = (lenn) => {
+  if(!lenn) lenn = 4 + Math.floor(Math.random() * 5)
   let name = getRandom(alphabet);
   for (let mmm = 0; mmm < lenn - 1; ++mmm) {
     if (name.charAt(name.length - 1) == "Z")

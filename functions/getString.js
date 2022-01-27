@@ -32,6 +32,8 @@ const alphabet = [
 // Generate alphanumeric string
 
 module.exports = (lenn) => {
+  if(!lenn) lenn = 4 + Math.floor(Math.random() * 5)
+
   let phrase =
     Math.random() > 0.5
       ? Math.floor(Math.random() * 10)
