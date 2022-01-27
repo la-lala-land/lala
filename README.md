@@ -1,6 +1,16 @@
 # LaLa
 A collection of random useful (probably) javascript classes and functions. 
 
+### How to use
+Open the command line in your project's directory.
+
+```bash
+$ mkdir lala && cd lala
+$ git clone https://github.com/retraigo/lala
+```
+
+When you wish to update the code, just do a `git pull` periodically.
+
 ### Edit Initial
 The only class currently is `Time` tho. And it's not really a Time class but rather a time object class. What's the difference? I don't know but the latter sounds more fitting for some reason. But I don't wanna rename `Time` into `TimeObj` or `TimeObject` since those are longer names and shorter names are more efficient (in being lazy yes).
 
