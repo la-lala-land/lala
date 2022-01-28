@@ -207,7 +207,7 @@ module.exports = () => {
   const rand = Math.random();
 
   return `The ${ml.description} ${
-    rand > 0.5 ? `and the ${fl.description} band together to ` : ``
+    rand > 0.5 ? `and the ${fl.description} ${getRandom(joins)} to ` : ``
   }${
     Math.random() < 0.5
       ? rand > 0.5
@@ -234,7 +234,7 @@ module.exports = () => {
       : ``
   }${
     Math.random() < 0.5
-      ? ` and save the world`
+      ? (rand > 0.5 ? ` and save the world` : ` and saves the world`)
       : Math.random() < 0.5
       ? ` for the sake of their peaceful life`
       : Math.random() < 0.5

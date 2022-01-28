@@ -1,0 +1,31 @@
+{
+  "name": "@nekooftheabyss/lala",
+  "version": "1.0.4",
+  "description": "A collection of random useful (probably) javascript classes and functions. No it wasn't named after Lala Satalin Deviluke (or it probably was, idk).",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekoOfTheAbyss/lala.git"
+  },
+  "keywords": [
+    "lala",
+    "random",
+    "name",
+    "generator",
+    "story",
+    "chain",
+    "mail",
+    "cursed",
+    "messages",
+    "fantasy"
+  ],
+  "author": "Neko Of The Abyss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NekoOfTheAbyss/lala/issues"
+  },
+  "homepage": "https://github.com/NekoOfTheAbyss/lala#readme"
+}

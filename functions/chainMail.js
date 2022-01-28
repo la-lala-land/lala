@@ -25,6 +25,15 @@ const taken = [
   "bitten by a snake",
   "poisoned",
   "crushed by an elevator",
+  "caught in a stampede",
+  "starved to death",
+  "hit by lightning",
+  "stabbed by a killer",
+  "eaten by a shark",
+  "caught in a tsunami",
+  "stuck in an elevator",
+  "shot by a stray bullet",
+  "buried alive",
   "impaled by an umbrella",
 ];
 const intro = [
