@@ -1,143 +1,4 @@
-const mtraits = [
-  {
-    name: "leader",
-    reliance: "group",
-    strength: 5,
-    optimism: 4,
-    adjective: "cool",
-    description: "alpha male",
-  },
-  {
-    name: "loner",
-    reliance: "self",
-    strength: 5,
-    optimism: "low-medium",
-    adjective: "loner",
-    description: "loner",
-  },
-  {
-    name: "adventurous",
-    reliance: "group",
-    strength: 5,
-    optimism: 5,
-    adjective: "adventurous",
-    description: "adventurous guy",
-  },
-  {
-    name: "nerd",
-    reliance: "self",
-    strength: 3,
-    optimism: 4,
-    adjective: "nerdy",
-    description: "nerd",
-  },
-  {
-    name: "mob",
-    reliance: "group",
-    strength: 5,
-    optimism: 4,
-    adjective: "background",
-    description: "average guy",
-  },
-  {
-    name: "femboy",
-    reliance: "self",
-    strength: 1,
-    optimism: 1,
-    adjective: "feminine",
-    description: "femboy",
-  },
-  {
-    name: "macho",
-    reliance: "love",
-    strength: 5,
-    optimism: 1,
-    adjective: "macho",
-    description: "macho guy",
-  },
-];
-const ftraits = [
-  {
-    name: "gal",
-    reliance: "group",
-    strength: 5,
-    optimism: 4,
-    adjective: "cool gal",
-    description: "gal",
-  },
-  {
-    name: "loner",
-    reliance: "self",
-    strength: 5,
-    optimism: "low-medium",
-    adjective: "loner",
-    description: "loner",
-  },
-  {
-    name: "adventurous",
-    reliance: "group",
-    strength: 5,
-    optimism: 5,
-    adjective: "adventurous",
-    description: "adventurous girl",
-  },
-  {
-    name: "nerd",
-    reliance: "self",
-    strength: 3,
-    optimism: 4,
-    adjective: "nerdy",
-    description: "nerd",
-  },
-  {
-    name: "mob",
-    reliance: "group",
-    strength: 5,
-    optimism: 4,
-    adjective: "background",
-    description: "average girl",
-  },
-  {
-    name: "yandere",
-    reliance: "love",
-    strength: 5,
-    optimism: 1,
-    adjective: "yandere",
-    description: "yandere",
-  },
-  {
-    name: "tsundere",
-    reliance: "love",
-    strength: 5,
-    optimism: 3,
-    adjective: "tsundere",
-    description: "tsundere",
-  },
-  {
-    name: "tomboy",
-    reliance: "self",
-    strength: 5,
-    optimism: 3,
-    adjective: "tomboyish",
-    description: "tomboy",
-  },
-  {
-    name: "karen",
-    reliance: "self",
-    strength: 5,
-    optimism: 5,
-    adjective: "karen",
-    description: "karen",
-  },
-  {
-    name: "cool",
-    reliance: "self",
-    strength: 5,
-    optimism: 5,
-    adjective: "cool",
-    description: "cool girl",
-  },
-];
+
 const joins = [
   "band together",
   "join hands",
@@ -182,16 +43,16 @@ const fantasyCreatures = require("../db/creatures/fantasy.json");
 const realCreatures = require("../db/creatures/reality.json");
 
 const creatures = fantasyCreatures.concat(realCreatures);
-
 const capitalize = require("./capitalize");
 
 const getRandom = require("./getRandom");
 const monster = require("./monster");
 const namer = require("./namer");
+const person = require("./person");
 
 module.exports = () => {
-  const ml = Math.random() > 0.4 ? getRandom(mtraits) : getRandom(ftraits);
-  const fl = Math.random() < 0.4 ? getRandom(mtraits) : getRandom(ftraits);
+  const ml = person()
+  const fl = person()
   const goodcreature = getRandom(
     creatures.filter((x) => x.affiliation === 1 || x.affiliation === 0)
   );
@@ -206,8 +67,8 @@ module.exports = () => {
 
   const rand = Math.random();
 
-  return `The ${ml.description} ${
-    rand > 0.5 ? `and the ${fl.description} ${getRandom(joins)} to ` : ``
+  return `The ${ml} ${
+    rand > 0.5 ? `and the ${fl} ${getRandom(joins)} to ` : ``
   }${
     Math.random() < 0.5
       ? rand > 0.5
@@ -215,7 +76,7 @@ module.exports = () => {
         : getRandom(actions)
       : `${getRandom(fight)}${rand > 0.5 ? `` : `s`}`
   } the${Math.random() < 0.5 ? ` ${evil()}` : ``} ${
-    evilcreature.name
+    Math.random() < 0.5 ? person() : evilcreature.name
   }, ${capitalize(monster())},${
     Math.random() < 0.5
       ? ` with the help of the ${goodcreature.plural}${
@@ -246,7 +107,7 @@ module.exports = () => {
       : Math.random() < 0.5
       ? ` to commit war crimes`
       : Math.random() < 0.5
-      ? ` to avenge the ${(Math.random() > 0.4 ? getRandom(mtraits) : getRandom(ftraits)).description}`
+      ? ` to avenge the ${person()}`
       : Math.random() < 0.5
       ? ` for world peace`
       : Math.random() < 0.5

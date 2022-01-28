@@ -8,6 +8,9 @@ const Gacha = {
 const Trash = {
     Decider: require('./classes/Decider')
 }
+const converter = {
+    owo: require('./functions/owoify')
+}
 
 const random = {
     array: require('./functions/getRandom'),
@@ -16,7 +19,8 @@ const random = {
     email: require('./functions/email'),
     monster: require('./functions/monster'),
     chain: require('./functions/chainMail'),
-    story: require('./functions/story')
+    story: require('./functions/story'),
+    person: require('./functions/person')
 }
 
 // You feel like the project is too big to import into your project? 
@@ -28,4 +32,5 @@ module.exports = {
     Gacha,
     Trash,
     random,
+    converter,
 }
