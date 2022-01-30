@@ -34,6 +34,16 @@ const taken = [
   "stuck in an elevator",
   "shot by a stray bullet",
   "buried alive",
+  "caught off-guard by the sleep paralysis demon",
+  "eaten by monsters",
+  "tossed from a cliff",
+  "tied up and tossed into the Atlantic ocean",
+  "tied up and tossed into the Pacific ocean",
+  "tied up and tossed into the Indian ocean",
+  "taken to Brazil",
+  "thrown into gulag",
+  "bonked by cheems",
+  "killed by the imposter",
   "impaled by an umbrella",
 ];
 const intro = [
@@ -43,6 +53,11 @@ const intro = [
   "I am called",
   "I was known as",
   "I used to be called",
+  "I was once called",
+  "When I was alive, they called me",
+  "Once upon a time, I was called",
+  "I think my name was",
+  "I am not sure if my name was"
 ];
 const relation = [
   "friends",
@@ -53,6 +68,17 @@ const relation = [
   "father",
   "grandparents",
   "classmates",
+  "grandpa",
+  "grandma",
+  "lonely ass",
+  "tamagotchi",
+  "pokemon",
+  "favorite streamer",
+  "college professor",
+  "imaginary friend",
+  "air friend",
+  "sleep paralysis demon",
+  "in-game character",
   "most important person",
   "school principal",
   "teacher from kindergarten",
@@ -66,9 +92,9 @@ const death = [
   "passed away",
   "lost my life",
 ];
-module.exports = () => {
+module.exports = (name) => {
   return `${getRandom(intro)} ${capitalize(
-    namer(4 + Math.floor(Math.random() * 5))
+    name ? name : namer(4 + Math.floor(Math.random() * 5))
   )}. ${
     Math.random() > 0.5
       ? `${Math.floor(Math.random() * 52)} years ago,`

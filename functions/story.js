@@ -50,7 +50,7 @@ const monster = require("./monster");
 const namer = require("./namer");
 const person = require("./person");
 
-module.exports = () => {
+module.exports = (name) => {
   const ml = person()
   const fl = person()
   const goodcreature = getRandom(
@@ -67,7 +67,7 @@ module.exports = () => {
 
   const rand = Math.random();
 
-  return `The ${ml} ${
+  return `${name ? name : `The ${ml}`} ${
     rand > 0.5 ? `and the ${fl} ${getRandom(joins)} to ` : ``
   }${
     Math.random() < 0.5
