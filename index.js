@@ -5,6 +5,7 @@ const Gacha = {
     Machine: require('./classes/Gacha'),
     Item: require('./classes/GachaItem')
 }
+const Collection = require('./classes/Collection')
 const Trash = {
     Decider: require('./classes/Decider')
 }
@@ -30,6 +31,7 @@ const random = {
 module.exports = {
     Time,
     Gacha,
+    Collection,
     Trash,
     random,
     converter,
