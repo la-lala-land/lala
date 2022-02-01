@@ -57,7 +57,7 @@ const intro = [
   "When I was alive, they called me",
   "Once upon a time, I was called",
   "I think my name was",
-  "I am not sure if my name was"
+  "I am not sure if my name was",
 ];
 const relation = [
   "friends",
@@ -93,9 +93,9 @@ const death = [
   "lost my life",
 ];
 module.exports = (name) => {
-  return `${getRandom(intro)} ${capitalize(
-    name ? name : namer(4 + Math.floor(Math.random() * 5))
-  )}. ${
+  return `${getRandom(intro)} ${
+    name ? name : capitalize(namer(4 + Math.floor(Math.random() * 5)))
+  }. ${
     Math.random() > 0.5
       ? `${Math.floor(Math.random() * 52)} years ago,`
       : `When I was ${5 + Math.floor(Math.random() * 12)}${

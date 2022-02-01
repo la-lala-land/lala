@@ -1,4 +1,4 @@
-const mod = require('./index')
+const mod = require("./index");
 
 /*
 let time = new mod.Time()
@@ -11,6 +11,8 @@ console.log(time.stringify(["m", "ms"], true))
 */
 
 // console.log(mod.random.string(Math.floor(Math.random() * 12)))
-console.log(mod.random.string(7))
-console.log((mod.random.name(5 + Math.floor(Math.random() * 5)) + " " + mod.random.name(5 + Math.floor(Math.random() * 5))))
-console.log(mod.random.chain("Dadada"))
+console.log(mod.random.string(7));
+const lenn = 5 + Math.floor(Math.random() * 5);
+console.log(mod.random.name(lenn));
+console.log(lenn);
+console.log(mod.random.chain());
