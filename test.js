@@ -15,4 +15,4 @@ console.log(mod.random.string(7));
 const lenn = 5 + Math.floor(Math.random() * 5);
 console.log(mod.random.name(lenn));
 console.log(lenn);
-console.log(mod.random.chain());
+console.log(mod.random.story());

@@ -16,6 +16,8 @@ const thirdperson = [
   "weeb",
   "gacha gamer",
   "game developer",
+  "Florida man",
+  "pokemon master",
   "narcissist",
   "programmer",
   "web developer",
@@ -55,6 +57,10 @@ const thirdperson = [
 const questions = ["if", "do", "did", "what if", "but then", "and"];
 
 const adjectives = [
+  "Indian",
+  "Russian",
+  "Japanese",
+  "Chinese",
   "great",
   "legendary",
   "trashy",
@@ -100,6 +106,10 @@ const adjectives = [
   "cool",
   "confident",
   "alpha",
+  "tiny",
+  "skinny",
+  "malnourished",
+  "dense"
 ];
 
 const level = ["level", "lv", "lvl", "tier", "stage", "rank"];
