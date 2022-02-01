@@ -1,6 +1,6 @@
 {
   "name": "@nekooftheabyss/lala",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A collection of random useful (probably) javascript classes and functions. No it wasn't named after Lala Satalin Deviluke (or it probably was, idk).",
   "main": "index.js",
   "scripts": {
