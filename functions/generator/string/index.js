@@ -1,4 +1,4 @@
-const getRandom = require("./getRandom");
+import getRandom from '../../util/getRandom.js';
 
 const alphabet = [
   "A",
@@ -31,7 +31,7 @@ const alphabet = [
 
 // Generate alphanumeric string
 
-module.exports = (lenn) => {
+export default (lenn) => {
   if(!lenn) lenn = 4 + Math.floor(Math.random() * 5)
 
   let phrase =

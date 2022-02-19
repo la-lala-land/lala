@@ -28,4 +28,4 @@ class Decider {
   }
 }
 
-module.exports = Decider;
+export default Decider;

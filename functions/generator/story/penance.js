@@ -1,4 +1,3 @@
-
 const joins = [
   "band together",
   "join hands",
@@ -39,20 +38,20 @@ const action = [
   "survive",
 ];
 const directions = ["north", "east", "west", "south"];
-const fantasyCreatures = require("../db/creatures/fantasy.json");
-const realCreatures = require("../db/creatures/reality.json");
+import fantasyCreatures from "../../../db/creatures/fantasy.js";
+import realCreatures from "../../../db/creatures/reality.js";
 
 const creatures = fantasyCreatures.concat(realCreatures);
-const capitalize = require("./capitalize");
+import capitalize from "../../util/capitalize.js";
 
-const getRandom = require("./getRandom");
-const monster = require("./monster");
-const namer = require("./namer");
-const person = require("./person");
+import getRandom from "../../util/getRandom.js";
+import monster from "../name/monster.js";
+import namer from "../name/normal.js";
+import person from "../name/character.js";
 
-module.exports = (name) => {
-  const ml = person()
-  const fl = person()
+export default (name) => {
+  const ml = person();
+  const fl = person();
   const goodcreature = getRandom(
     creatures.filter((x) => x.affiliation === 1 || x.affiliation === 0)
   );
@@ -77,7 +76,7 @@ module.exports = (name) => {
       : `${getRandom(fight)}${rand > 0.5 ? `` : `s`}`
   } the${Math.random() < 0.5 ? ` ${evil()}` : ``} ${
     Math.random() < 0.5 ? person() : evilcreature.name
-  }, ${capitalize(monster())},${
+  }${Math.random < 0.5 ? `, ${capitalize(monster())},` : ``}${
     Math.random() < 0.5
       ? ` with the help of the ${goodcreature.plural}${
           Math.random() < 0.5
@@ -95,7 +94,9 @@ module.exports = (name) => {
       : ``
   }${
     Math.random() < 0.5
-      ? (rand > 0.5 ? ` and save the world` : ` and saves the world`)
+      ? rand > 0.5
+        ? ` and save the world`
+        : ` and saves the world`
       : Math.random() < 0.5
       ? ` for the sake of their peaceful life`
       : Math.random() < 0.5

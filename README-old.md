@@ -29,7 +29,7 @@ $ git clone https://github.com/retraigo/lala
 You can access everything with
 
 ```js
-const lala = require("./lala")
+import lala from './lala'
 ```
 
 as long as you don't have an existing file or folder named `lala`.

@@ -1,4 +1,4 @@
-[
+export default [
   {
     "name": "imp",
     "plural": "imps",

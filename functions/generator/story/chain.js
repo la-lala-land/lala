@@ -1,6 +1,6 @@
-const capitalize = require("./capitalize");
-const getRandom = require("./getRandom");
-const namer = require("./namer");
+import capitalize from '../../util/capitalize.js';
+import getRandom from '../../util/getRandom.js';
+import namer from '../name/normal.js';
 
 const forward = ["forward", "send", "show", "copy/paste"];
 const message = ["message", "story", "text"];
@@ -92,7 +92,7 @@ const death = [
   "passed away",
   "lost my life",
 ];
-module.exports = (name) => {
+export default (name) => {
   return `${getRandom(intro)} ${
     name ? name : capitalize(namer(4 + Math.floor(Math.random() * 5)))
   }. ${

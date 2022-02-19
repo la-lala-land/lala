@@ -1,5 +1,4 @@
-const getRandom = require("./getRandom");
-const capitalize = require("./capitalize");
+import getRandom from '../../util/getRandom.js';
 
 const thirdperson = [
   "hero",
@@ -16,6 +15,8 @@ const thirdperson = [
   "weeb",
   "gacha gamer",
   "game developer",
+  "Florida man",
+  "pokemon master",
   "narcissist",
   "programmer",
   "web developer",
@@ -55,6 +56,10 @@ const thirdperson = [
 const questions = ["if", "do", "did", "what if", "but then", "and"];
 
 const adjectives = [
+  "Indian",
+  "Russian",
+  "Japanese",
+  "Chinese",
   "great",
   "legendary",
   "trashy",
@@ -100,13 +105,17 @@ const adjectives = [
   "cool",
   "confident",
   "alpha",
+  "tiny",
+  "skinny",
+  "malnourished",
+  "dense"
 ];
 
 const level = ["level", "lv", "lvl", "tier", "stage", "rank"];
 const levels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 69, 70, 80, 90, 99, 100, 101, 200, 420, 500, 666, 999]
 
 /*
-module.exports = () => {
+export default () => {
   const person = Math.ceil(Math.random() * 3);
   return `${
     person === 1
@@ -128,7 +137,7 @@ module.exports = () => {
 };
 */
 
-module.exports = () => {
+export default () => {
   return `${
     Math.random() < 0.5
       ? Math.random() > 0.3
