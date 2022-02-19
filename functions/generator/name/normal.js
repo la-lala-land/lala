@@ -1,4 +1,4 @@
-const getRandom = require("./getRandom");
+import getRandom from '../../util/getRandom.js';
 
 const vowels = ["A", "E", "I", "O", "U"];
 const alphabet = [
@@ -64,7 +64,7 @@ const after = {
 
 const dontEnd = ["W", "V"];
 
-module.exports = (lenn) => {
+export default (lenn) => {
   if (!lenn) lenn = 4 + Math.floor(Math.random() * 5);
   let name = getRandom(alphabet);
   for (let mmm = 0; mmm < lenn - 1; ++mmm) {
@@ -73,9 +73,9 @@ module.exports = (lenn) => {
         dontEnd.includes(name.charAt(name.length - 1)) &&
         consonants.includes(name.charAt(name.length - 2))
       ) {
-        console.log(`Name: ${name.slice(0, name.length - 2)} ${name}`)
         name = name.slice(0, name.length - 1) + getRandom(vowels);
-      } else name += getRandom(after[name.charAt(name.length - 1)]);
+      } 
+      name += getRandom(after[name.charAt(name.length - 1)]);
     } else {
       if (
         consonants.includes(name.charAt(name.length - 1)) &&
@@ -95,7 +95,7 @@ module.exports = (lenn) => {
 };
 
 /*
-module.exports = (lenn) => {
+export default (lenn) => {
   if(!lenn) lenn = 4 + Math.floor(Math.random() * 5)
   let name = getRandom(alphabet);
   for (let mmm = 0; mmm < lenn - 1; ++mmm) {

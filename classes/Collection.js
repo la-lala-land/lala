@@ -72,4 +72,4 @@ class Collection extends Map {
     }
 }
 
-module.exports = Collection;
+export default Collection;

@@ -17,7 +17,7 @@ $ git clone https://github.com/NekoOfTheAbyss/lala
 
 ### Import
 ```js
-const lala = require("@nekooftheabyss/lala") 
+import lala from '@nekooftheabyss/lala' 
 ```
 Idk haven't tried with ES6 modules yet.
 

@@ -1,4 +1,4 @@
-module.exports = (txt) => {
+export default (txt) => {
   return txt
     .replace(/(?:r|l)/g, "w")
     .replace(/(?:R|L)/g, "W")
