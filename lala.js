@@ -14,6 +14,8 @@ import genMonster from "./functions/generator/name/monster.js";
 import genChain from "./functions/generator/story/chain.js";
 import genStory from "./functions/generator/story/index.js";
 import genCharacter from "./functions/generator/name/character.js";
+import genRace from "./functions/generator/name/race.js"
+import {Race} from "./functions/generator/name/race.js"
 
 const util = { capitalize, randomFromArr, reverseString };
 const random = {
@@ -24,12 +26,14 @@ const random = {
   genChain,
   genStory,
   genCharacter,
+  genRace,
 };
 
 export default {Time, Collection, util, random}
 
 export {
   Time,
+  Race,
   Collection,
   Decider,
   capitalize,
@@ -43,6 +47,7 @@ export {
   genChain,
   genStory,
   genCharacter,
+  genRace,
 };
 
 // You feel like the project is too big to import into your project?

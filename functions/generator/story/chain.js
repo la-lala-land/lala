@@ -45,6 +45,27 @@ const taken = [
   "bonked by cheems",
   "killed by the imposter",
   "impaled by an umbrella",
+  "turned into fumo",
+  "returned to monke",
+  "killed by herobrine",
+  "eaten by ants",
+  "electrocuted by a pikachu",
+  "forced to eat pizza with choco chips and wasabi sauce",
+  "discovered by a discord mod",
+  "turned into a discord mod",
+  "eaten by a llama",
+  "thrown into a snake pit",
+  "decapitated by a piece of paper",
+  "ejected into the space",
+  "forced to watch Dragon Ball Evolution",
+  "burned at the stakes",
+  "discovered by a plague doctor",
+  "down with a fatal disease after eating moldy bread",
+  "down with pneumonia",
+  "crushed by an elephant",
+  "assaulted by a yandere",
+  "assaulted by a stalker",
+  "mutilated alive"
 ];
 const intro = [
   "I am",
@@ -84,6 +105,14 @@ const relation = [
   "teacher from kindergarten",
   "pet spider",
   "loved ones",
+  "favorite character",
+  "disgusting self",
+  "senior",
+  "junior",
+  "great-grandchild",
+  "great-grandchildren",
+  "phone",
+  "internet friends"
 ];
 const death = [
   "died",
