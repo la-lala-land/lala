@@ -38,7 +38,7 @@ const rate = {
     size: ["very small", "small", "medium-sized", "somewhat large", "large", "giant"],
     strength: ["very weak", "weak", "strong", "somewhat strong", "formidable", "extremely powerful", "invincible", "godly"],
     intelligence: ["brainless", "unintelligent", "somewhat intelligent", "intelligent", "highly intelligent", "most intelligent"],
-    appearance: ["disgusting", "unsettling", "average", "beautiful", "splendid", "indescribable"]
+    appearance: ["disgusting", "unsettling", "average", "beautiful", "splendid", "indescribable", "unimaginable"]
 }
 
 function run() {
