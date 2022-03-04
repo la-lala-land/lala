@@ -1,6 +1,6 @@
 {
   "name": "@nekooftheabyss/lala",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A collection of random useful (probably) javascript classes and functions. No it wasn't named after Lala Satalin Deviluke (or it probably was, idk).",
   "main": "lala.js",
   "type": "module",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NekoOfTheAbyss/lala.git"
+    "url": "git+https://github.com/retraigo/lala.git"
   },
   "keywords": [
     "lala",
@@ -26,7 +26,7 @@
   "author": "Neko Of The Abyss",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NekoOfTheAbyss/lala/issues"
+    "url": "https://github.com/retraigo/lala/issues"
   },
-  "homepage": "https://docs.nekooftheabyss.xyz/lala"
+  "homepage": "https://lala.nekooftheabyss.xyz/"
 }
