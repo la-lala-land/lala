@@ -1,8 +1,19 @@
-export default [
+export interface Creature {
+  name: string;
+  plural: string;
+  level: number;
+  affiliation: number;
+  intelligence: number;
+  size: number;
+  body_parts: Record<string, boolean>;
+  magical: boolean;
+  appearance: number;
+}
+const Creatures: Creature[] = [
   {
     name: "imp",
     plural: "imps",
-    level: "lower",
+    level: 2,
     affiliation: -1,
     intelligence: 3,
     size: 1,
@@ -249,7 +260,7 @@ export default [
       animal_ears: true,
     },
     magical: true,
-    appearance: "disputable",
+    appearance: 0,
   },
   {
     name: "wisp",
@@ -270,7 +281,7 @@ export default [
       animal_ears: false,
     },
     magical: true,
-    appearance: "disputable",
+    appearance: 0,
   },
   {
     name: "harpy",
@@ -299,7 +310,7 @@ export default [
     level: 1,
     affiliation: 0,
     intelligence: 1,
-    size: "tiny",
+    size: 1,
     body_parts: {
       tail: true,
       head: true,
@@ -404,7 +415,7 @@ export default [
     level: 5,
     affiliation: 0,
     intelligence: 1,
-    size: "disputable",
+    size: 0,
     body_parts: {
       tail: true,
       head: true,
@@ -417,7 +428,7 @@ export default [
       animal_ears: false,
     },
     magical: true,
-    appearance: "disputable",
+    appearance: 0,
   },
   {
     name: "dragonewt",
@@ -798,3 +809,5 @@ export default [
     appearance: 1,
   },
 ];
+
+export default Creatures;
