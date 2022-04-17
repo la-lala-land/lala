@@ -1,4 +1,5 @@
-export default (txt) => {
+export default (txt: string): string => {
+  if(!txt) return ""
   return txt
     .replace(/(?:r|l)/g, "w")
     .replace(/(?:R|L)/g, "W")

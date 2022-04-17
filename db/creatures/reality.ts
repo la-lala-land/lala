@@ -1,4 +1,6 @@
-export default [
+import type {Creature} from "./fantasy.ts"
+
+const Creatures: Creature[] = [
   {
     name: "cat",
     plural: "cats",
@@ -714,3 +716,5 @@ export default [
     appearance: 3,
   },
 ];
+
+export default Creatures;
