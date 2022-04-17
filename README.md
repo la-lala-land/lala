@@ -28,11 +28,6 @@ import { generateName } from '@nekooftheabyss/lala'
 console.log(generateName(5)) // MOYAI
 ```
 
-
-```js
-new lala.Time(86403000) // Returns a time class instance for 24 hours and 3 seconds
-```
-
 ## Deno
 ```ts
 import lala from "https://deno.land/x/lala/mod.ts"
@@ -43,6 +38,10 @@ or
 import { generateName } from "https://deno.land/x/lala/mod.ts"
 console.log(generateName(5)) // MOYAI
 ```
+
+## Classes
+`Time` has been moved to https://github.com/retraigo/duration.js
+`Gacha` has been moved to https://github.com/queenochaos/fortuna
 
 -------------
 
