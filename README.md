@@ -20,11 +20,11 @@ $ git clone https://github.com/NekoOfTheAbyss/lala
 #### Import
 ```js
 import lala from '@nekooftheabyss/lala' 
-console.log(lala.random.getName(5)) // MOYAI
+console.log(lala.generateName(5)) // MOYAI
 ```
 or
 ```js
-import { getName } from '@nekooftheabyss/lala'
+import { generateName } from '@nekooftheabyss/lala'
 console.log(generateName(5)) // MOYAI
 ```
 
@@ -35,8 +35,13 @@ new lala.Time(86403000) // Returns a time class instance for 24 hours and 3 seco
 
 ## Deno
 ```ts
-import * as lala from "https://deno.land/x/lala/mod.ts"
+import lala from "https://deno.land/x/lala/mod.ts"
 console.log(lala.generateName(5)) // MOYAI
+```
+or
+```ts
+import { generateName } from "https://deno.land/x/lala/mod.ts"
+console.log(generateName(5)) // MOYAI
 ```
 
 -------------
