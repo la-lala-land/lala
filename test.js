@@ -1,31 +1,3 @@
-import mod from './lala.js';
+import mod from './mod.ts';
 
-/*
-let time = new mod.Time()
-console.log(time)
-console.log(time.array)
-console.log(time.stringify())
-console.log(time.stringify(null, true))
-console.log(time.stringify(["m", "ms"], false))
-console.log(time.stringify(["m", "ms"], true))
-
-// console.log(mod.random.string(Math.floor(Math.random() * 12)))
-console.log(mod.random.genString(7));
-const lenn = 5 + Math.floor(Math.random() * 5);
-console.log(mod.random.genName(lenn));
-console.log(lenn);
-console.log(mod.random.genStory());
-for(let i = 0; i < 100; ++i) {
-    console.log(mod.random.genName(5))
-}
-*/
-/*
-console.log(~~(123123.23123 * 10) / 10)
-let a = [0, 3, 4, 4, 5]
-a.splice(- 2)
-console.log(a)
-
-console.log({} === {})
-*/
-
-console.log(mod.random.genRace(true))
+console.log(mod.generateRace(true))

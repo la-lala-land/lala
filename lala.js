@@ -1765,7 +1765,17 @@ class Race {
     constructor(){
         const { body , similarities  } = run();
         this.name = __default4(__default3());
-        this.body = {};
+        this.body = {
+            tail: {},
+            head: {},
+            wings: {},
+            hands: {},
+            legs: {},
+            fingers: {},
+            toes: {},
+            horns: {},
+            animal_ears: {}
+        };
         Object.keys(this.body).forEach((x)=>{
             this.body[x] = {
                 exists: body[x],
@@ -2714,12 +2724,12 @@ const mod = {
     reverse: __default7,
     owoify: __default8,
     weebify: __default9,
+    generateString,
     generateEmail,
     generateCharacter: __default2,
     generateName: __default1,
     generateFantasyName: __default3,
     generateRace,
-    generateStory,
-    generateString
+    generateStory
 };
 export { mod as default };

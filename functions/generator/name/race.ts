@@ -4,8 +4,8 @@ import getRandom from "../../util/get_random.ts";
 import genMonster from "./monster.ts";
 
 export interface BodyType {
-  exists: boolean;
-  similarities: string | boolean;
+  exists?: boolean;
+  similarities?: string | boolean;
 }
 
 export class Race {
@@ -19,7 +19,17 @@ export class Race {
   constructor() {
     const { body, similarities } = run();
     this.name = capitalize(genMonster());
-    this.body = {};
+    this.body = {
+      tail: {},
+      head: {},
+      wings: {},
+      hands: {},
+      legs: {},
+      fingers: {},
+      toes: {},
+      horns: {},
+      animal_ears: {},
+    };
     Object.keys(this.body).forEach((x) => {
       this.body[x] = { exists: body[x], similarities: similarities[x] };
     });
