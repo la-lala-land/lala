@@ -2724,12 +2724,12 @@ const mod = {
     reverse: __default7,
     owoify: __default8,
     weebify: __default9,
-    generateString,
-    generateEmail,
+    generateStory,
     generateCharacter: __default2,
     generateName: __default1,
     generateFantasyName: __default3,
     generateRace,
-    generateStory
+    generateEmail,
+    generateString
 };
 export { mod as default };
