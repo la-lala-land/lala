@@ -54,7 +54,7 @@ export class Race {
   get description() {
     return `${this.name}${
       this.affiliation === 0
-        ? ` ${getRandom(["is a neutral this", "do not take sides"])}`
+        ? ` ${getRandom(["is a neutral race", "do not take sides"])}`
         : this.affiliation === 1
         ? ` ${
           getRandom([
