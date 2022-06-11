@@ -41,13 +41,105 @@ export class Race {
   }
   get human() {
     if (
-      this.body.head?.exists && this.body.hands?.exists &&
-      this.body.legs?.exists && this.body.fingers?.exists &&
+      this.body.head?.exists &&
+      this.body.hands?.exists &&
+      this.body.legs?.exists &&
+      this.body.fingers?.exists &&
       this.body.toes?.exists
     ) {
       return true;
     }
     return false;
+  }
+  get description() {
+    return `${this.name}${
+      this.affiliation === 0
+        ? ` ${getRandom(["is a neutral this", "do not take sides"])}`
+        : this.affiliation === 1
+        ? ` ${
+          getRandom([
+            "is a race that walks the righteous path",
+            "are self-proclaimed messengers of justice",
+            "is a race that proclaims to work towards the absolute good",
+          ])
+        }`
+        : ` ${
+          getRandom([
+            "is a chaotic race",
+            "live in the darkness",
+            "serve the demons",
+          ])
+        }`
+    }. ${
+      this.body.head.exists
+        ? `${
+          getRandom([
+            `Their head looks similar to that of a ${this.body.head.similarities}`,
+            `They possess facial features that remind one of a ${this.body.head.similarities}`,
+            `Their head is akin to that of a ${this.body.head.similarities}`,
+          ])
+        }${
+          this.body.animal_ears.exists
+            ? this.body.animal_ears.similarities ===
+                this.body.head.similarities
+              ? ""
+              : ` but with ears that look like a ${this.body.animal_ears.similarities}`
+            : ""
+        }`
+        : `${
+          getRandom([
+            "They possess no head",
+            "They lack a head",
+            "They are headless",
+          ])
+        }`
+    } and ${
+      this.magical ? "possess a spiritual body" : `${
+        getRandom([
+          "possess a material body",
+          "have a living, organic body",
+          "have a normal body",
+        ])
+      }`
+    }. ${
+      this.body.wings.exists
+        ? `They possess wings that look like that of a ${this.body.wings.similarities}${
+          Math.random() < 0.5 ? " but are actually flightless" : ""
+        }. `
+        : ""
+    }They are ${rate.size[this.size]} in size and ${
+      rate.intelligence[this.intelligence]
+    }. ${
+      this.body.legs.exists
+        ? `${
+          getRandom([
+            `Their legs look like a ${this.body.legs.similarities}'s legs`,
+            `Their legs are similar to a ${this.body.legs.similarities} with small differences`,
+          ])
+        }${!this.body.toes.exists ? " and a notable absence of toes" : ""}`
+        : getRandom(["They possess no feet", "They lack legs"])
+    }. ${
+      this.body.hands.exists
+        ? this.body.legs.exists &&
+            this.body.hands.similarities === this.body.legs.similarities
+          ? "The same could be said for their hands"
+          : `However, they possess hands like that of a ${this.body.hands.similarities}${
+            !this.body.fingers.exists ? "with no fingers" : ""
+          }.`
+        : `They possess no ${
+          !this.body.legs.exists ? "hands either" : "modified forearms"
+        }.`
+    } ${
+      this.body.horns.exists
+        ? `They sport ${
+          Math.random() < 0.5
+            ? "a wonderful horn"
+            : `${1 + Math.ceil(Math.random() * 3)} horns`
+        } which distantly resemble that of a ${this.body.horns.similarities}. `
+        : ""
+    }On the whole, they are said to be ${
+      rate.appearance[this.appearance]
+    } in appearance.`;
   }
 }
 
@@ -103,7 +195,9 @@ function run() {
   };
 
   Object.keys(body).forEach((x) => {
-    Object.defineProperty(body, x, { value: getRandom(fantasy).body_parts[x] });
+    Object.defineProperty(body, x, {
+      value: getRandom(fantasy).body_parts[x],
+    });
   });
   const similarities: Record<string, string | boolean> = {
     tail: false,
@@ -117,104 +211,16 @@ function run() {
     animal_ears: false,
   };
   Object.keys(similarities).forEach((x) => {
-    similarities[x] = getRandom(fantasy.filter((y) => y.body_parts[x])).name;
+    similarities[x] = getRandom(
+      fantasy.filter((y) => y.body_parts[x]),
+    ).name;
   });
   return { body, similarities };
 }
-function generateRace(): Race;
-function generateRace(text: boolean): string;
-function generateRace(text?: boolean): string | Race {
+function generateRace(name?: string): Race {
   const race = new Race();
-  if (text) {
-    return `${race.name}${
-      race.affiliation === 0
-        ? ` ${getRandom(["is a neutral race", "do not take sides"])}`
-        : race.affiliation === 1
-        ? ` ${
-          getRandom([
-            "is a race that walks the righteous path",
-            "are self-proclaimed messengers of justice",
-            "is a race that proclaims to work towards the absolute good",
-          ])
-        }`
-        : ` ${
-          getRandom([
-            "is a chaotic race",
-            "live in the darkness",
-            "serve the demons",
-          ])
-        }`
-    }. ${
-      race.body.head.exists
-        ? `${
-          getRandom([
-            `Their head looks similar to that of a ${race.body.head.similarities}`,
-            `They possess facial features that remind one of a ${race.body.head.similarities}`,
-            `Their head is akin to that of a ${race.body.head.similarities}`,
-          ])
-        }${
-          race.body.animal_ears.exists
-            ? race.body.animal_ears.similarities ===
-                race.body.head.similarities
-              ? ""
-              : ` but with ears that look like a ${race.body.animal_ears.similarities}`
-            : ""
-        }`
-        : `${
-          getRandom([
-            "They possess no head",
-            "They lack a head",
-            "They are headless",
-          ])
-        }`
-    } and ${
-      race.magical ? "possess a spiritual body" : `${
-        getRandom([
-          "possess a material body",
-          "have a living, organic body",
-          "have a normal body",
-        ])
-      }`
-    }. ${
-      race.body.wings.exists
-        ? `They possess wings that look like that of a ${race.body.wings.similarities}${
-          Math.random() < 0.5 ? " but are actually flightless" : ""
-        }. `
-        : ""
-    }They are ${rate.size[race.size]} in size and ${
-      rate.intelligence[race.intelligence]
-    }. ${
-      race.body.legs.exists
-        ? `${
-          getRandom([
-            `Their legs look like a ${race.body.legs.similarities}'s legs`,
-            `Their legs are similar to a ${race.body.legs.similarities} with small differences`,
-          ])
-        }${!race.body.toes.exists ? " and a notable absence of toes" : ""}`
-        : getRandom(["They possess no feet", "They lack legs"])
-    }. ${
-      race.body.hands.exists
-        ? (race.body.legs.exists &&
-            (race.body.hands.similarities === race.body.legs.similarities))
-          ? "The same could be said for their hands"
-          : `However, they possess hands like that of a ${race.body.hands.similarities}${
-            !race.body.fingers.exists ? "with no fingers" : ""
-          }`
-        : `They possess no ${
-          !race.body.legs.exists ? "hands either" : "modified forearms"
-        }.`
-    } ${
-      race.body.horns.exists
-        ? `They sport ${
-          Math.random() < 0.5
-            ? "a wonderful horn"
-            : `${1 + Math.ceil(Math.random() * 3)} horns`
-        } which distantly resemble that of a ${race.body.horns.similarities}. `
-        : ""
-    }On the whole, they are said to be ${
-      rate.appearance[race.appearance]
-    } in appearance.`;
-  } else return race;
+  if (name) race.name = name;
+  return race;
 }
 
 export default generateRace;
