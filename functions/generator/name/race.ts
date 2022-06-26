@@ -8,6 +8,10 @@ export interface BodyType {
   similarities?: string | boolean;
 }
 
+/**
+ * A race.
+ * @property {string} name - Name of the race
+ */
 export class Race {
   name: string;
   body: Record<string, BodyType>;
@@ -217,6 +221,11 @@ function run() {
   });
   return { body, similarities };
 }
+/**
+ * Create a random, weird, fantasy race.
+ * @param {string} name - Name of the race. 
+ * @returns {Race} A race class.
+ */
 function generateRace(name?: string): Race {
   const race = new Race();
   if (name) race.name = name;
