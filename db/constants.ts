@@ -1,4 +1,10 @@
+/**
+ * Vowels of the English language.
+ */
 export const vowels = ["A", "E", "I", "O", "U"];
+/**
+ * All alphabets of the English language.
+ */
 export const alphabet = [
   "A",
   "B",
@@ -27,8 +33,15 @@ export const alphabet = [
   "Y",
   "Z",
 ];
+
+/**
+ * Consonants of the English alphabet.
+ */
 export const consonants = alphabet.filter((x) => !vowels.includes(x));
 
+/**
+ * Character titles.
+ */
 export const thirdperson = [
   "hero",
   "mage",
@@ -88,8 +101,14 @@ export const thirdperson = [
   "nerd",
 ];
 
+/**
+ * Question words.
+ */
 export const questions = ["if", "do", "did", "what if", "but then", "and"];
 
+/**
+ * Character adjectives.
+ */
 export const adjectives = [
   "Chinese",
   "Indian",
@@ -103,6 +122,7 @@ export const adjectives = [
   "alien",
   "alpha",
   "amazing",
+  "amphibious",
   "ancient",
   "angelic",
   "average",
@@ -212,6 +232,7 @@ export const adjectives = [
   "massive",
   "matchless",
   "meek",
+  "melancholic",
   "merciless",
   "mindless",
   "monstrous",
@@ -223,6 +244,7 @@ export const adjectives = [
   "nocturnal",
   "notorious",
   "novel",
+  "nutty",
   "obsessive",
   "omnipotent",
   "omniscient",
@@ -240,6 +262,7 @@ export const adjectives = [
   "pure",
   "rabid",
   "reincarnated",
+  "reinstated",
   "repugnant",
   "repulsive",
   "rich",
@@ -258,6 +281,11 @@ export const adjectives = [
   "short",
   "silver",
   "skinny",
+  "slender",
+  "slick",
+  "slim",
+  "slimy",
+  "sly",
   "spirit",
   "steel",
   "stereotypical",
@@ -268,6 +296,7 @@ export const adjectives = [
   "sweet",
   "talkative",
   "tall",
+  "tender",
   "timid",
   "tiny",
   "trashy",
@@ -281,6 +310,7 @@ export const adjectives = [
   "villainous",
   "viscous",
   "voracious",
+  "war-crazed",
   "warlord",
   "weak",
   "weary",
@@ -297,9 +327,22 @@ export const adjectives = [
   "zen",
 ];
 
+/**
+ * Level text.
+ */
 export const level = ["level", "lv", "lvl", "tier", "stage", "rank", "class"];
+
+/**
+ * List of permitted levels.
+ * I thought I'd go with Math.random()
+ * But randomized levels look kinda weird.
+ * Like, what's a Level 43 cowboy supposed to mean?
+ */
 export const levels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 69, 70, 80, 90, 99, 100, 101, 200, 420, 500, 666, 999, 1000, 9999, 10000, 99999, 100000, 1000000]
 
+/**
+ * Rules for name generator.
+ */
 export 
 const after = [
   {
@@ -726,8 +769,14 @@ const after = [
   { letter: "Z", possible: ["A", "E", "I", "O", "U", "H"] },
 ];
 
+/**
+ * Rulen'ts for name generator.
+ */
 export const dontEnd = ["W", "V"];
 
+/**
+ * Suffixes for fantasy name generator.
+ */
 export const suffix = [
   "er",
   "ug",
@@ -742,6 +791,9 @@ export const suffix = [
   "ra",
 ];
 
+/**
+ * This section is filled with data for chain mail generator.
+ */
 export const forward = ["forward", "send", "show", "copy/paste"];
 export const message = ["message", "story", "text"];
 export const taken = [
@@ -805,7 +857,8 @@ export const taken = [
   "crushed by an elephant",
   "assaulted by a yandere",
   "assaulted by a stalker",
-  "mutilated alive"
+  "mutilated alive",
+  "killed by sunlight after being a shut-in for years",
 ];
 export const intro = [
   "I am",
@@ -852,7 +905,11 @@ export const relation = [
   "great-grandchild",
   "great-grandchildren",
   "phone",
-  "internet friends"
+  "internet friends",
+  "pet ant",
+  "donkey",
+  "cat",
+  "rock"
 ];
 export const death = [
   "died",
@@ -862,6 +919,9 @@ export const death = [
   "lost my life",
 ];
 
+/**
+ * Email data.
+ */
 export const commonMails = [
   "gmail.com",
   "yahoo.com",
@@ -882,6 +942,9 @@ export const endsWith = [
   "gg",
   "cc",
   "de",
+  "ly",
+  "st",
+  "bio",
   "in",
   "jp",
   "cr",
@@ -892,12 +955,19 @@ export const endsWith = [
   "uk",
 ];
 
-export const secondLevel = ["co", "org", "edu"];
+export const secondLevel = ["co", "org", "edu", "ac", "gov"];
+
+/**
+ * Story data.
+ */
 export const joins = [
   "band together",
   "join hands",
   "compete with each other",
   "form an alliance",
+  "declare their love to each other",
+  "become sworn siblings",
+  "pledge their souls",
   "form a truce",
   "become allies",
   "forget their differences",

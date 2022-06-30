@@ -25,4 +25,4 @@ export function generateString(lenn?: number): string {
   }
 
   return phrase;
-};
+}

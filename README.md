@@ -40,7 +40,7 @@ console.log(generateName(5)) // MOYAI
 ```
 
 ## Classes
-`Time` has been moved to https://github.com/retraigo/duration.js
+`Time` has been moved to https://github.com/nekooftheabyss/duration.js
 `Gacha` has been moved to https://github.com/queenochaos/fortuna
 
 -------------
