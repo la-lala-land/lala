@@ -122,6 +122,7 @@ export const adjectives = [
   "alien",
   "alpha",
   "amazing",
+  "amphibious",
   "ancient",
   "angelic",
   "average",
@@ -231,6 +232,7 @@ export const adjectives = [
   "massive",
   "matchless",
   "meek",
+  "melancholic",
   "merciless",
   "mindless",
   "monstrous",
@@ -242,6 +244,7 @@ export const adjectives = [
   "nocturnal",
   "notorious",
   "novel",
+  "nutty",
   "obsessive",
   "omnipotent",
   "omniscient",
@@ -259,6 +262,7 @@ export const adjectives = [
   "pure",
   "rabid",
   "reincarnated",
+  "reinstated",
   "repugnant",
   "repulsive",
   "rich",
@@ -277,6 +281,11 @@ export const adjectives = [
   "short",
   "silver",
   "skinny",
+  "slender",
+  "slick",
+  "slim",
+  "slimy",
+  "sly",
   "spirit",
   "steel",
   "stereotypical",
@@ -287,6 +296,7 @@ export const adjectives = [
   "sweet",
   "talkative",
   "tall",
+  "tender",
   "timid",
   "tiny",
   "trashy",
@@ -300,6 +310,7 @@ export const adjectives = [
   "villainous",
   "viscous",
   "voracious",
+  "war-crazed",
   "warlord",
   "weak",
   "weary",
@@ -846,7 +857,8 @@ export const taken = [
   "crushed by an elephant",
   "assaulted by a yandere",
   "assaulted by a stalker",
-  "mutilated alive"
+  "mutilated alive",
+  "killed by sunlight after being a shut-in for years",
 ];
 export const intro = [
   "I am",
@@ -893,7 +905,11 @@ export const relation = [
   "great-grandchild",
   "great-grandchildren",
   "phone",
-  "internet friends"
+  "internet friends",
+  "pet ant",
+  "donkey",
+  "cat",
+  "rock"
 ];
 export const death = [
   "died",
@@ -926,6 +942,9 @@ export const endsWith = [
   "gg",
   "cc",
   "de",
+  "ly",
+  "st",
+  "bio",
   "in",
   "jp",
   "cr",
@@ -936,7 +955,7 @@ export const endsWith = [
   "uk",
 ];
 
-export const secondLevel = ["co", "org", "edu"];
+export const secondLevel = ["co", "org", "edu", "ac", "gov"];
 
 /**
  * Story data.
@@ -946,6 +965,9 @@ export const joins = [
   "join hands",
   "compete with each other",
   "form an alliance",
+  "declare their love to each other",
+  "become sworn siblings",
+  "pledge their souls",
   "form a truce",
   "become allies",
   "forget their differences",
