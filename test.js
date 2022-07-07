@@ -1,3 +1,3 @@
 import mod from './mod.ts';
 
-console.log(mod.generateString(10))
+console.log(mod.generateStory(10))

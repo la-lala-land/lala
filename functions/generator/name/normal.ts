@@ -1,4 +1,4 @@
-import getRandom from "../../util/get_random.ts";
+import { getRandom } from "../../util/mod.ts";
 
 import {
   after,
@@ -8,8 +8,12 @@ import {
   vowels,
 } from "../../../db/constants.ts";
 
-
-export default (lenn?: number): string => {
+/**
+ * Generate a random name. The name is just a normal word that can be pronounced.
+ * @param lenn Length of the name to generate.
+ * @returns Random name that actually makes sense.
+ */
+export function generateName(lenn?: number): string {
   if (!lenn) lenn = 4 + Math.floor(Math.random() * 5);
   let name: string = getRandom(alphabet);
   for (let mmm = 0; mmm < lenn - 1; ++mmm) {
@@ -47,4 +51,4 @@ export default (lenn?: number): string => {
     }
   }
   return name;
-};
+}

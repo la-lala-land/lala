@@ -1,7 +1,6 @@
 import fantasy from "../../../db/creatures/fantasy.ts";
-import capitalize from "../../util/capitalize.ts";
-import getRandom from "../../util/get_random.ts";
-import genMonster from "./monster.ts";
+import { capitalize, getRandom } from "../../util/mod.ts";
+import { generateFantasyName } from "./monster.ts";
 
 export interface BodyType {
   exists?: boolean;
@@ -22,7 +21,7 @@ export class Race {
   appearance: number;
   constructor() {
     const { body, similarities } = run();
-    this.name = capitalize(genMonster());
+    this.name = capitalize(generateFantasyName());
     this.body = {
       tail: {},
       head: {},
@@ -223,10 +222,10 @@ function run() {
 }
 /**
  * Create a random, weird, fantasy race.
- * @param {string} name - Name of the race. 
+ * @param {string} name - Name of the race.
  * @returns {Race} A race class.
  */
-function generateRace(name?: string): Race {
+export function generateRace(name?: string): Race {
   const race = new Race();
   if (name) race.name = name;
   return race;
