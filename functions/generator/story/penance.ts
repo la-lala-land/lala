@@ -2,25 +2,29 @@ import fantasyCreatures from "../../../db/creatures/fantasy.ts";
 import realCreatures from "../../../db/creatures/reality.ts";
 
 const creatures = fantasyCreatures.concat(realCreatures);
-import capitalize from "../../util/capitalize.ts";
+import { capitalize, getRandom } from "../../util/mod.ts";
 
-import getRandom from "../../util/get_random.ts";
-import monster from "../name/monster.ts";
-import namer from "../name/normal.ts";
-import person from "../name/character.ts";
+import {
+  generateCharacter,
+  generateFantasyName,
+  generateName,
+} from "../name/mod.ts";
 
 import {
   action,
   actions,
+  directions,
   fight,
   joins,
   powers,
-  directions,
 } from "../../../db/constants.ts";
 
-export default (name: string): string => {
-  const ml = person();
-  const fl = person();
+/**
+ * Generate random story.
+ */
+export const penance = (name: string): string => {
+  const ml = generateCharacter();
+  const fl = generateCharacter();
   const goodcreature = getRandom(
     creatures.filter((x) => x.affiliation === 1 || x.affiliation === 0),
   );
@@ -43,15 +47,15 @@ export default (name: string): string => {
       ? rand > 0.5 ? getRandom(action) : getRandom(actions)
       : `${getRandom(fight)}${rand > 0.5 ? `` : `s`}`
   } the${Math.random() < 0.5 ? ` ${evil()}` : ``} ${
-    Math.random() < 0.5 ? person() : evilcreature.name
-  }${Math.random() < 0.5 ? `, ${capitalize(monster())},` : ``}${
+    Math.random() < 0.5 ? generateCharacter() : evilcreature.name
+  }${Math.random() < 0.5 ? `, ${capitalize(generateFantasyName())},` : ``}${
     Math.random() < 0.5
       ? ` with the help of the ${goodcreature.plural}${
         Math.random() < 0.5
           ? ` of ${
             Math.random() < 0.5
               ? `the ${getRandom(directions)}`
-              : capitalize(namer(4 + Math.floor(Math.random() * 3)))
+              : capitalize(generateName(4 + Math.floor(Math.random() * 3)))
           }`
           : ``
       }`
@@ -74,7 +78,7 @@ export default (name: string): string => {
       : Math.random() < 0.5
       ? ` to commit war crimes`
       : Math.random() < 0.5
-      ? ` to avenge the ${person()}`
+      ? ` to avenge the ${generateCharacter()}`
       : Math.random() < 0.5
       ? ` for world peace`
       : Math.random() < 0.5

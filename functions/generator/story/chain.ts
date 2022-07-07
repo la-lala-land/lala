@@ -1,6 +1,5 @@
-import capitalize from "../../util/capitalize.ts";
-import getRandom from "../../util/get_random.ts";
-import namer from "../name/normal.ts";
+import { capitalize, getRandom } from "../../util/mod.ts";
+import { generateName } from "../name/mod.ts";
 import {
   death,
   forward,
@@ -10,9 +9,9 @@ import {
   taken,
 } from "../../../db/constants.ts";
 
-export default (name?: string): string => {
+export const generateChainMail = (name?: string): string => {
   return `${getRandom(intro)} ${
-    name ? name : capitalize(namer(4 + Math.floor(Math.random() * 5)))
+    name ? name : capitalize(generateName(4 + Math.floor(Math.random() * 5)))
   }. ${
     Math.random() > 0.5
       ? `${Math.floor(Math.random() * 52)} years ago,`

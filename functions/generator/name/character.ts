@@ -1,4 +1,4 @@
-import getRandom from "../../util/get_random.ts";
+import {getRandom} from "../../util/mod.ts";
 import {
   adjectives,
   level,
@@ -6,7 +6,11 @@ import {
   thirdperson,
 } from "../../../db/constants.ts";
 
-export default (): string => {
+/**
+ * Generate a random fantasy character.
+ * @returns A random character
+ */
+export const generateCharacter = (): string => {
   return `${
     Math.random() < 0.9
       ? Math.random() > 0.3

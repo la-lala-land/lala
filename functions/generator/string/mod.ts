@@ -1,9 +1,9 @@
-import getRandom from "../../util/get_random.ts";
+import { getRandom } from "../../util/mod.ts";
 import { alphabet } from "../../../db/constants.ts";
 
 /**
  * Generate a random string.
- * @param {number} lenn - Length of the string
+ * @param {number} lenn Length of the string
  * @returns {string} Generated string
  */
 export function generateString(lenn?: number): string {
