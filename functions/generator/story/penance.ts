@@ -10,14 +10,17 @@ import {
   generateName,
 } from "../name/mod.ts";
 
-import {
-  action,
+import Synonyms from "../../../data/synonyms.ts"
+import directions from "../../../data/directions.ts";
+import powers from "../../../data/power.ts"
+const {
   actions,
-  directions,
   fight,
-  joins,
-  powers,
-} from "../../../db/constants.ts";
+  join
+} = Synonyms;
+
+
+
 
 /**
  * Generate random story.
@@ -41,10 +44,10 @@ export const penance = (name: string): string => {
   const rand = Math.random();
 
   return `${name ? name : `The ${ml}`} ${
-    rand > 0.5 ? `and the ${fl} ${getRandom(joins)} to ` : ``
+    rand > 0.5 ? `and the ${fl} ${getRandom(join)} to ` : ``
   }${
     Math.random() < 0.5
-      ? rand > 0.5 ? getRandom(action) : getRandom(actions)
+      ? rand > 0.5 ? getRandom(actions.singular) : getRandom(actions.plural)
       : `${getRandom(fight)}${rand > 0.5 ? `` : `s`}`
   } the${Math.random() < 0.5 ? ` ${evil()}` : ``} ${
     Math.random() < 0.5 ? generateCharacter() : evilcreature.name

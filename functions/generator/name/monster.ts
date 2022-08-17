@@ -1,7 +1,7 @@
 import { getRandom } from "../../util/mod.ts";
 import { generateName } from "./normal.ts";
-import { suffix } from "../../../db/constants.ts";
 
+import suffix from "../../../data/suffixesForFantasy.ts"
 /**
  * Generate a fantasy name like the stuff in RPGs.
  * @returns Fantasy name
