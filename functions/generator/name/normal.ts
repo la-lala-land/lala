@@ -1,12 +1,7 @@
 import { getRandom } from "../../util/mod.ts";
 
-import {
-  after,
-  alphabet,
-  consonants,
-  dontEnd,
-  vowels,
-} from "../../../db/constants.ts";
+import { alphabet, consonants, vowels } from "../../../data/alphabet.ts";
+import after from "../../../data/nameRules.ts"
 
 /**
  * Generate a random name. The name is just a normal word that can be pronounced.
@@ -16,14 +11,8 @@ import {
 export function generateName(lenn?: number): string {
   if (!lenn) lenn = 4 + Math.floor(Math.random() * 5);
   let name: string = getRandom(alphabet);
-  for (let mmm = 0; mmm < lenn - 1; ++mmm) {
-    if (mmm === lenn - 2) {
-      if (
-        dontEnd.includes(name.charAt(name.length - 1)) &&
-        consonants.includes(name.charAt(name.length - 2))
-      ) {
-        name = name.slice(0, name.length - 1) + getRandom(vowels);
-      }
+  for (let pointer = 0; pointer < lenn - 1; ++pointer) {
+    if (pointer === lenn - 2) {
       name += getRandom(
         after.find((x) =>
           x.letter === name.charAt(name.length - 1).toUpperCase()

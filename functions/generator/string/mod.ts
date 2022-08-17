@@ -1,5 +1,5 @@
 import { getRandom } from "../../util/mod.ts";
-import { alphabet } from "../../../db/constants.ts";
+import { alphabet } from "../../../data/alphabet.ts";
 
 /**
  * Generate a random string.
@@ -16,7 +16,7 @@ export function generateString(lenn?: number): string {
     : getRandom(alphabet).toLowerCase();
 
   //  maxlim = Math.ceil(Math.random() * limit);
-  for (let mmm = 0; mmm < lenn - 1; ++mmm) {
+  for (let pointer = 0; pointer < lenn - 1; ++pointer) {
     const chances = Math.random();
     if (chances < 0.3) phrase += getRandom(alphabet);
     else if (chances > 0.3 && chances < 0.7) {

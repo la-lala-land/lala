@@ -1,17 +1,16 @@
 import { capitalize, getRandom } from "../../util/mod.ts";
 import { generateName } from "../name/mod.ts";
-import {
-  death,
-  forward,
-  intro,
-  message,
-  relation,
-  taken,
-} from "../../../db/constants.ts";
+
+import relation from "../../../data/relation.ts";
+import taken from "../../../data/death.ts";
+
+import Synonyms from "../../../data/synonyms.ts";
+
+const { death, forward, intro, message } = Synonyms;
 
 export const generateChainMail = (name?: string): string => {
   return `${getRandom(intro)} ${
-    name ? name : capitalize(generateName(4 + Math.floor(Math.random() * 5)))
+    name ? name : capitalize(generateName(4 + Math.floor(Math.random() * 5)).toLowerCase())
   }. ${
     Math.random() > 0.5
       ? `${Math.floor(Math.random() * 52)} years ago,`
