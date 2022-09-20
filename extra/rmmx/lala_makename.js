@@ -22,7 +22,7 @@
  * @text Generate random name
  * @desc Sets the character's name to a randomly generated name.
  *
- * @arg length
+ * @arg len
  * @type number
  * @text Length
  * @desc Length of the name.
@@ -56,7 +56,8 @@
     const Lala = await import("https://deno.land/x/lala@v3.1.4/lala.js");
 
     PluginManager.registerCommand(pluginName, "makeName", args => {
-        const name = Lala.generateName(args.length)
+        console.log(args)
+        const name = Lala.generateName(args.len)
         $gameActors.actor(args.actor).setName(Lala.capitalize(name, true))
     });
     PluginManager.registerCommand(pluginName, "makeMonsterLikeName", args => {
@@ -64,7 +65,7 @@
         $gameActors.actor(args.actor).setName(Lala.capitalize(name, true))
     });
     PluginManager.registerCommand(pluginName, "makeNickname", args => {
-        const name = Lala.generateCharacter(args.length)
+        const name = Lala.generateCharacter()
         $gameActors.actor(args.actor).setNickname(Lala.capitalize(name, true))
     });
 })();
