@@ -1,5 +1,5 @@
-import fantasyCreatures from "../../../db/creatures/fantasy.ts";
-import realCreatures from "../../../db/creatures/reality.ts";
+import fantasyCreatures from "../../../data/creatures/fantasy.ts";
+import realCreatures from "../../../data/creatures/reality.ts";
 
 const creatures = fantasyCreatures.concat(realCreatures);
 import { capitalize, getRandom } from "../../util/mod.ts";
@@ -51,7 +51,7 @@ export const penance = (name: string): string => {
       : `${getRandom(fight)}${rand > 0.5 ? `` : `s`}`
   } the${Math.random() < 0.5 ? ` ${evil()}` : ``} ${
     Math.random() < 0.5 ? generateCharacter() : evilcreature.name
-  }${Math.random() < 0.5 ? `, ${capitalize(generateFantasyName())},` : ``}${
+  }${
     Math.random() < 0.5
       ? ` with the help of the ${goodcreature.plural}${
         Math.random() < 0.5

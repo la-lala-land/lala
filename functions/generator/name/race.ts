@@ -1,4 +1,4 @@
-import fantasy from "../../../db/creatures/fantasy.ts";
+import fantasy from "../../../data/creatures/fantasy.ts";
 import { capitalize, getRandom } from "../../util/mod.ts";
 import { generateFantasyName } from "./monster.ts";
 
